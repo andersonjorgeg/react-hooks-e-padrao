@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './templates/App/index';
+import ExUseCallback from './templates/ExUseCallback';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ExUseCallback />
   </React.StrictMode>,
   document.getElementById('root'),
 );
