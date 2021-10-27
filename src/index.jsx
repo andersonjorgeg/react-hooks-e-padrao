@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ExUseMemo2 from './templates/ExUseMemo2';
+import ExUseRef from './templates/ExUseRef';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ExUseMemo2 />
+    <ExUseRef />
   </React.StrictMode>,
   document.getElementById('root'),
 );
