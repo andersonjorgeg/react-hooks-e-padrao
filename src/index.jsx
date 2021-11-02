@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ExUseContext2 from './templates/ExUseContext2';
+import ExUseReducer from './templates/ExUseReducer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ExUseContext2 />
+    <ExUseReducer />
   </React.StrictMode>,
   document.getElementById('root'),
 );
