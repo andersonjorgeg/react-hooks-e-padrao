@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ExUseMyHook from './templates/ExUseMyHook';
+import App from './templates/App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ExUseMyHook />
+    <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );
