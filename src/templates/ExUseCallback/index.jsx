@@ -16,6 +16,7 @@ const Button = React.memo(function Button({ incrementButton }) {
   );
 });
 
+// propTypes
 Button.propTypes = {
   incrementButton: P.func,
 };

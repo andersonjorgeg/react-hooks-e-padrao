@@ -1,5 +1,4 @@
 //criando os dados
 export const data = {
-  posts: [],
-  loading: false,
+  counter: 0,
 };

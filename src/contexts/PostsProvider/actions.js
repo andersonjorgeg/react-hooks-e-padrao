@@ -7,6 +7,7 @@ export const loadPosts = async (dispatch) => {
 
   //fazendo a requisição dos posts
   const postsRaw = await fetch('https://jsonplaceholder.typicode.com/posts');
+  //transformando o resultado em json
   const posts = await postsRaw.json();
   console.log('Carreguei');
 
