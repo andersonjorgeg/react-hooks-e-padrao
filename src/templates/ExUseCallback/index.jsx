@@ -24,6 +24,7 @@ Button.propTypes = {
 export default function ExUseCallback() {
   const [counter, setCounter] = useState(0);
 
+  // useCallback para não re-renderizar o componente
   const incrementCounter = useCallback((num) => {
     setCounter((c) => c + num);
   }, []);

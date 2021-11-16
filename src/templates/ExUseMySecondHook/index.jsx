@@ -48,6 +48,11 @@ const useFetch = (url, options) => {
     // flag para seta o wait como false
     let wait = false;
 
+    // verifica se deve carregar a página
+    const controller = new AbortController();
+    // criando uma função para cancelar a requisição
+    const signal = controller.signal;
+
     console.log('EFFECT', new Date().toLocaleString());
     console.log(optionsRef.current.headers);
     // seta o state do loading
@@ -59,7 +64,10 @@ const useFetch = (url, options) => {
       await new Promise((r) => setTimeout(r, 1000));
       try {
         // cria uma constante para pegar a resposta da requisição
-        const response = await fetch(urlRef.current, optionsRef);
+        const response = await fetch(urlRef.current, {
+          signal,
+          ...optionsRef.current,
+        });
         // cria uma constante para pegar a resposta transformada em json
         const jsonResult = await response.json();
 
@@ -77,16 +85,18 @@ const useFetch = (url, options) => {
           // seta o loading como false
           setLoading(false);
         }
-        throw error;
+        console.warn(error);
       }
     };
     // chama a função fetchData
     fetchData();
 
-    // limpeza do hook useEffect
+    // limpeza do hook useEffect - desmontando o componente
     return () => {
       // seta o wait como true
       wait = true;
+      // cancela a requisição
+      controller.abort();
     };
     // array de dependências do useEffect
   }, [shouldLoading]);
@@ -106,11 +116,6 @@ export const ExUseMySecondHook = () => {
       },
     },
   );
-
-  // usando o hook useEffect para monitorar o postId
-  useEffect(() => {
-    console.log(`ID do post: ${postId}`);
-  }, [postId]);
 
   // condicional para mostrar o loading
   if (loading) {
