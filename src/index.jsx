@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { ExUseMySecondHook } from './templates/ExUseMySecondHook';
+import { ExUseFetch } from './templates/ExUseFetch';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ExUseMySecondHook />
+    <ExUseFetch />
   </React.StrictMode>,
   document.getElementById('root'),
 );
