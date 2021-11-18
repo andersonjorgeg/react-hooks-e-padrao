@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { ExUseFetch } from './templates/ExUseFetch';
+import { ExUseAsync } from './templates/ExUseAsync';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ExUseFetch />
+    <ExUseAsync />
   </React.StrictMode>,
   document.getElementById('root'),
 );
