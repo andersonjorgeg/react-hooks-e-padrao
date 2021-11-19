@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { ExUseAsync } from './templates/ExUseAsync';
+import { ExUseLayoutEffect } from './templates/ExUseLayoutEffect';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ExUseAsync />
+    <ExUseLayoutEffect />
   </React.StrictMode>,
   document.getElementById('root'),
 );
