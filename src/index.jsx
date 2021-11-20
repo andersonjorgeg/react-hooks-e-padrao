@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { ExUseLayoutEffect } from './templates/ExUseLayoutEffect';
+import { ExUseImperativeHandle } from './templates/ExUseImperativeHandle';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ExUseLayoutEffect />
+    <ExUseImperativeHandle />
   </React.StrictMode>,
   document.getElementById('root'),
 );
