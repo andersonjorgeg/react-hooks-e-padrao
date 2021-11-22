@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { ExUseImperativeHandle } from './templates/ExUseImperativeHandle';
+import { ExUseMediaQuery } from './templates/ExUseMediaQuery';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ExUseImperativeHandle />
+    <ExUseMediaQuery />
   </React.StrictMode>,
   document.getElementById('root'),
 );
