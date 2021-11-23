@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { OrdemHooks } from './templates/OrdemHooks';
+import { ErrorBoundaries } from './templates/ErrorBoundaries';
 
 ReactDOM.render(
   <React.StrictMode>
-    <OrdemHooks />
+    <ErrorBoundaries />
   </React.StrictMode>,
   document.getElementById('root'),
 );
