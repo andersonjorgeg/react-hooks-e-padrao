@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { ErrorBoundaries } from './templates/ErrorBoundaries';
+import { CompoundComponents } from './templates/CompoundComponents';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ErrorBoundaries />
+    <CompoundComponents />
   </React.StrictMode>,
   document.getElementById('root'),
 );
