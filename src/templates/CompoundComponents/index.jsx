@@ -18,6 +18,11 @@ const TurnOnOff = ({ children }) => {
 
   // retornando os componentes filhos
   return Children.map(children, (child) => {
+    // confere se o tipo do componente é 'string'
+    if (typeof child.type === 'string') {
+      // se for retorna o componente filho original
+      return child;
+    }
     // child é um elemento
     const newChild = cloneElement(child, {
       isOn,
@@ -33,7 +38,9 @@ const TurnedOn = ({ isOn, children }) => (isOn ? children : null);
 const TurnedOff = ({ isOn, children }) => (isOn ? null : children);
 const TurnButton = ({ isOn, onTurn, ...props }) => {
   return (
+    // passando os props para o componente
     <button onClick={onTurn} {...props}>
+      {/* passando o estado para o componente */}
       Turn {isOn ? 'off' : 'on'}
     </button>
   );
@@ -46,6 +53,7 @@ export const CompoundComponents = () => {
       <TurnedOn>
         <P>Aqui as coisas que vão acontecer quando estiver on.</P>
       </TurnedOn>
+      <p>oi</p>
       <TurnedOff>
         <P>Aqui vem as coisas do off.</P>
       </TurnedOff>

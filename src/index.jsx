@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { CompoundComponents } from './templates/CompoundComponents';
+import { CompoundComponentsContext } from './templates/CompoundComponentsContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CompoundComponents />
+    <CompoundComponentsContext />
   </React.StrictMode>,
   document.getElementById('root'),
 );
