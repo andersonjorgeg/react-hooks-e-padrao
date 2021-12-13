@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { CompoundComponentsContext } from './templates/CompoundComponentsContext';
+import { ExLazy } from './templates/ExLazy';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CompoundComponentsContext />
+    <ExLazy />
   </React.StrictMode>,
   document.getElementById('root'),
 );
